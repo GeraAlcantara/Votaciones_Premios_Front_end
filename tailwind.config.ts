@@ -20,7 +20,7 @@ const config: Config = {
           'brand-yellow': '#D3F527',
           'brand-orange': '#FF930F',
           'brand-purple': '#4A28F2',
-          'brand-lila': '#A998F8', 
+          'brand-lila': '#A998F8',
         },
       },
     },
