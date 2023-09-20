@@ -5,5 +5,5 @@ export default function Home() {
         Premios Discord MiduDev 2023
       </h1>
     </main>
-  );
+  )
 }
