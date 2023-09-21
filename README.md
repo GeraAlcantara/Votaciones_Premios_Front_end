@@ -18,7 +18,7 @@ permitiendo que los miembros tomen issues abiertas y las completen.
 
 - **Categorías de Premios:** El sistema permite la creación de diversas categorías de premios, como _"La persona que más ayuda", "El más cancelable", "El más hater"_ y otras categorías divertidas.
 - **Votación y Postulación:** Los miembros del servidor pueden votar por los candidatos en cada categoría y también tienen la posibilidad de postularse para ser considerados como candidatos.
-- **Autenticación con GitHub:** Para garantizar la autenticidad de las votaciones y las postulaciones, se utiliza la _autenticación con cuentas de GitHub_, tomando únicamente el **Email** y el **Usuario**.
+- **Autenticación con Discord:** Para garantizar la autenticidad de las votaciones y las postulaciones, se utiliza la _autenticación con cuentas de Discord_, tomando únicamente el **Email** y el **Usuario**.
 - **Contribución al Repositorio:** Los miembros pueden contribuir al proyecto **tomando issues abiertas** y completando las tareas relacionadas.
 
 ## Tecnologías Utilizadas:
@@ -28,7 +28,7 @@ _El proyecto se desarrolla utilizando las siguientes tecnologías:_
 - **Lenguaje de Programación:** Typescript.
 - **Framework:** Next.js, TailwindCSS.
 - **Base de Datos:** MongoDB.
-- **Autenticación:** Se utiliza la autenticación de GitHub para garantizar la integridad de las votaciones y postulaciones.
+- **Autenticación:** Se utiliza la autenticación de Discord para garantizar la integridad de las votaciones y postulaciones.
 
 ## Guía de Contribución:
 
