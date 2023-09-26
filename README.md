@@ -29,6 +29,10 @@ _El proyecto se desarrolla utilizando las siguientes tecnologías:_
 - **Framework:** Next.js, TailwindCSS.
 - **Base de Datos:** MongoDB.
 - **Autenticación:** Se utiliza la autenticación de Discord para garantizar la integridad de las votaciones y postulaciones.
+- **Zustand** Se utilizara como manejador de estados global y para manejar el patron flux, asi se centraliza el uso de funcionalidades en un solo lugar. Ej: useAuthStore le 	corresponderia todo lo relacionado al auth. *nota*: Es posible usar zustand en client de la forma normal y en server components a pesar de que el store sea un hook, de la siguiente manera: 
+	`const { aqui lo que quiera destructurar de store } = useAuthStore.getState()`
+	*https://github.com/descorce/next-js-experiments* <- repo publico con ejemplo se zustand en app router con server actions.
+- **Server Actions** Estan incluidas en Next JS a partir de la version 13.5.2	dentro de ellas se puede usar *redirect* el cual resulta muy util para cosas antes imposibles, tambien le hace muy buena compañia *revalidePath*.
 
 ## Guía de Contribución:
 
