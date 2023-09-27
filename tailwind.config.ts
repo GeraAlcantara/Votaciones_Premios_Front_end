@@ -20,6 +20,10 @@ const config: Config = {
         'brand-orange': '#FF930F',
         'brand-purple': '#4A28F2',
         'brand-lila': '#A998F8'
+      },
+      fontFamily: {
+        monserrat: ['var(--monserrat)'],
+        'jet-brains': ['var(--jet-brains)']
       }
     }
   },
