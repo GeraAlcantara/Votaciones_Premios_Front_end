@@ -38,10 +38,13 @@ _El proyecto se desarrolla utilizando las siguientes tecnologías:_
 
 Invitamos a todos los miembros del servidor de MiduDev a contribuir al proyecto. Para hacerlo, sigue estos pasos:
 
+- Utilizar como **BASE** la rama [Dev](https://github.com/GeraAlcantara/Votaciones_Premios_Front_end/tree/dev).
 - Encuentra una issue abierta que te interese en el repositorio del proyecto.
 - Comenta en la issue tu interés en trabajar en ella y solicita que se te asigne.
 - Una vez que se te asigne la issue, trabaja en ella y crea un pull request cuando hayas completado la tarea.
 - Nuestro equipo revisará tu pull request y lo fusionará si cumple con los estándares de calidad.
+
+### ⚠ <sup><sub><samp>IMPORTANTE HACER UN "PULL" ANTES DE CUALQUIER "PUSH".</samp></sub></sup>
 
 **Si consideras que se puede hacer una "Feature" que no está listada en las Issues. Podés abrir una nueva e indicar detalladamente el por qué. Recordá utilizar correctamente los LABELS**
 
