@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 
 import { Inter } from 'next/font/google'
 
+import { ThemeProvider } from '@/lib/theme-provider'
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -15,9 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body
-        className={`${inter.className} bg-brand-light text-brand-dark dark:bg-brand-dark dark:text-brand-light`}
+        className={`${inter.className} bg-brand-light text-brand-dark dark:brand-dark dark:text-brand-light`}
       >
-        {children}
+        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+          <ThemeSwitcher />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )
