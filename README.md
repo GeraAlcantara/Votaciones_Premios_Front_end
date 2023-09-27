@@ -29,15 +29,22 @@ _El proyecto se desarrolla utilizando las siguientes tecnologías:_
 - **Framework:** Next.js, TailwindCSS.
 - **Base de Datos:** MongoDB.
 - **Autenticación:** Se utiliza la autenticación de Discord para garantizar la integridad de las votaciones y postulaciones.
+- **Zustand** Se utilizara como manejador de estados global y para manejar el patron flux, asi se centraliza el uso de funcionalidades en un solo lugar. Ej: useAuthStore le 	corresponderia todo lo relacionado al auth. *nota*: Es posible usar zustand en client de la forma normal y en server components a pesar de que el store sea un hook, de la siguiente manera: 
+	`const { aqui lo que quiera destructurar de store } = useAuthStore.getState()`
+	*https://github.com/descorce/next-js-experiments* <- repo publico con ejemplo se zustand en app router con server actions.
+- **Server Actions** Estan incluidas en Next JS a partir de la version 13.4.0	dentro de ellas se puede usar *redirect* a partir de la 13.5.2 el cual resulta muy util para cosas antes imposible, tambien le hace muy buena compañia *revalidePath*.
 
 ## Guía de Contribución:
 
 Invitamos a todos los miembros del servidor de MiduDev a contribuir al proyecto. Para hacerlo, sigue estos pasos:
 
+- Utilizar como **BASE** la rama [Dev](https://github.com/GeraAlcantara/Votaciones_Premios_Front_end/tree/dev).
 - Encuentra una issue abierta que te interese en el repositorio del proyecto.
 - Comenta en la issue tu interés en trabajar en ella y solicita que se te asigne.
 - Una vez que se te asigne la issue, trabaja en ella y crea un pull request cuando hayas completado la tarea.
 - Nuestro equipo revisará tu pull request y lo fusionará si cumple con los estándares de calidad.
+
+### ⚠ <sup><sub><samp>IMPORTANTE HACER UN "PULL" ANTES DE CUALQUIER "PUSH".</samp></sub></sup>
 
 **Si consideras que se puede hacer una "Feature" que no está listada en las Issues. Podés abrir una nueva e indicar detalladamente el por qué. Recordá utilizar correctamente los LABELS**
 
