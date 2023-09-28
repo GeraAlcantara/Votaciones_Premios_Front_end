@@ -8,7 +8,7 @@ interface LogoProps {
 
 export default function Logo({ className = '' }: LogoProps) {
   return (
-    <article className={`flex relative h-full max-h-[103px] m-5 ${className}`}>
+    <article className={`flex relative h-full max-h-[103px] m-5 ${className}`} role="logo">
       <h1 className="flex flex-col bg-brand-dark dark:bg-brand-yellow p-3 h-full justify-center items-center">
         <span className="text-brand-yellow dark:text-brand-dark font-monserrat font-black text-5xl">
           DISCORD
