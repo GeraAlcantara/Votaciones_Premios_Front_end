@@ -1,10 +1,10 @@
 'use client'
 
+import type { MenuOptions } from '@/types/menu.type'
+
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-import { type MenuOptions } from '@/types/menu.type'
 
 import Logo from './logo'
 

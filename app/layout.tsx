@@ -1,12 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import type { MenuOptions } from '@/types/menu.type'
 
 import { Montserrat, JetBrains_Mono } from 'next/font/google'
 
 import { ThemeProvider } from '@/lib/theme-provider'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import Menu from '@/components/menu'
-import { MenuOptions } from '@/types/menu.type'
 
 const Monserrat = Montserrat({ subsets: ['latin'], variable: '--monserrat' })
 const JetBrains = JetBrains_Mono({ subsets: ['latin'], variable: '--jet-brains' })
