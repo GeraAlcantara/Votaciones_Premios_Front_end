@@ -11,19 +11,11 @@ export default function Hero() {
     <section className="flex flex-col grow shrink h-auto w-full">
       <article className="flex grow shrink min-h-screen w-full justify-center items-center relative overflow-hidden">
         <StickerHeroL className="absolute top-0 left-0 z-40" />
-        <h2 className="flex flex-col">
-          <span className="relative z-50 font-monserrat text-[9.3rem] leading-[8rem] font-black text-brand-purple drop-shadow-2xl">
-            DISCORD
-          </span>
-          <span className="relative z-50 font-monserrat text-[9.3rem] leading-[8rem] font-black text-brand-dark dark:text-brand-light drop-shadow-2xl">
-            AWARDS
-          </span>
-          <span className="relative z-50 font-monserrat text-[8.8rem] leading-[8rem] font-black text-brand-purple drop-shadow-2xl">
-            MIDUDEV
-          </span>
-          <span className="relative z-50 font-monserrat text-[18rem] leading-[13rem] font-black text-brand-yellow drop-shadow-2xl stroke-black">
-            2023
-          </span>
+        <h2 className="flex flex-col font-monserrat relative z-50 font-black drop-shadow-2xl [&>span]:leading-[0.8]">
+          <span className="text-[9.3rem] text-brand-purple">DISCORD</span>
+          <span className="text-[9.3rem] text-brand-dark dark:text-brand-light">AWARDS</span>
+          <span className="text-[8.8rem] text-brand-purple">MIDUDEV</span>
+          <span className="text-[18rem] text-brand-yellow stroke-black">2023</span>
         </h2>
         <StickerHeroR className="absolute bottom-0 right-0 z-40" />
       </article>
