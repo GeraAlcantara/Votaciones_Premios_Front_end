@@ -35,7 +35,7 @@ function Footer() {
                             res
                         </span>
                         <div className="absolute flex flex-row flex-wrap">
-        {/*                     {collaborators.map((contributor: Contributor, index: number) => {
+                            {collaborators.map((contributor: Contributor, index: number) => {
                                 return (
                                     <div key={`${contributor.id}-${index}`}>
                                         <span>{contributor.login}</span>
@@ -47,7 +47,7 @@ function Footer() {
                                         />
                                     </div>
                                 )
-                            })} */}
+                            })}
                         </div>
                     </div>
                     <div>
