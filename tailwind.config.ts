@@ -13,7 +13,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-radial-blurred-purple':
-          'radial-gradient(circle, hsla(250, 89%, 55%, 0.1) 30%, hsla(250, 70%, 12%, 0.05) 50%, hsla(250, 70%, 12%, 0) 70%, hsla(250, 70%, 12%, 0) 100%)'
+          'radial-gradient(circle, hsla(250, 89%, 55%, 0.1) 40%, hsla(250, 70%, 12%, 0.0) 50%, hsla(250, 70%, 12%, 0) 65%, hsla(250, 75%, 14%, 0) 100%)'
       },
       colors: {
         'brand-light': '#F7F1F9',
