@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   ]
 
   return (
-    <html lang="es">
+    <html suppressHydrationWarning lang="es">
       <body
         className={`${Monserrat.variable} ${JetBrains.variable} bg-brand-light text-brand-dark dark:bg-brand-dark dark:text-brand-light`}
       >
