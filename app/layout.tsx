@@ -7,6 +7,7 @@ import { Montserrat, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/lib/theme-provider'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import Menu from '@/components/menu'
+import Footer from '@/components/footer'
 
 const Monserrat = Montserrat({ subsets: ['latin'], variable: '--monserrat' })
 const JetBrains = JetBrains_Mono({ subsets: ['latin'], variable: '--jet-brains' })
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ThemeSwitcher />
           <Menu options={routes} />
           <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
