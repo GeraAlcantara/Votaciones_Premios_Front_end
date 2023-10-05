@@ -16,7 +16,7 @@ export const ThemeSwitcher = () => {
 
   return (
     <button
-      className={`flex items-center justify-center absolute right-5 top-[150px] p-2 h-16 w-16 rounded-md hover:scale-110 active:scale-100 duration-200 bg-brand-light dark:bg-brand-dark z-[500]`}
+      className={`flex items-center justify-center absolute right-5 top-[380px] lg:top-[150px] p-2 h-16 w-16 rounded-md hover:scale-110 active:scale-100 duration-200 bg-brand-light dark:bg-brand-dark z-[500]`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {' '}

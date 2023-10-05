@@ -17,10 +17,10 @@ function Menu({ options }: MenuProps) {
 
   return (
     <nav
-      className={`flex justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light h-[138px]`}
+      className={`flex flex-col lg:flex-row justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light h-auto lg:h-[138px]`}
     >
-      <Logo />
-      <ul className="flex gap-10 mr-10 items-center">
+      <Logo className="self-center" />
+      <ul className="flex flex-col lg:flex-row gap-10 lg:mr-10 mt-10 lg:mt-0 mb-5 lg:mb-0 items-center justify-center">
         {options.map((option, index) => (
           <li key={`option.path-${index}`}>
             <Link
