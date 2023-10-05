@@ -21,8 +21,8 @@ function Menu({ options }: MenuProps) {
     >
       <Logo />
       <ul className="flex gap-10 mr-10 items-center">
-        {options.map((option) => (
-          <li key={option.path}>
+        {options.map((option, index) => (
+          <li key={`option.path-${index}`}>
             <Link
               className={`
 								${
