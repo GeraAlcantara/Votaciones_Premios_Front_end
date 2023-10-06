@@ -5,7 +5,6 @@ import type { MenuOptions } from '@/types/menu.type'
 import { Montserrat, JetBrains_Mono } from 'next/font/google'
 
 import { ThemeProvider } from '@/lib/theme-provider'
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import Menu from '@/components/menu'
 
 const Monserrat = Montserrat({ subsets: ['latin'], variable: '--monserrat' })
@@ -36,12 +35,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning lang="es">
       <body
-        className={`${Monserrat.variable} ${JetBrains.variable} bg-brand-light text-brand-dark dark:bg-brand-dark dark:text-brand-light`}
+        className={`${Monserrat.variable} ${JetBrains.variable} bg-brand-light text-brand-dark dark:bg-brand-dark dark:text-brand-light min-h-screen relative`}
       >
         <ThemeProvider enableSystem attribute="class" defaultTheme="system">
-          <ThemeSwitcher />
           <Menu options={routes} />
-          <main>{children}</main>
+
+          <div>{children}</div>
         </ThemeProvider>
       </body>
     </html>

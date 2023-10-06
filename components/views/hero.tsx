@@ -10,8 +10,8 @@ export default function Hero() {
   return (
     <section className="flex flex-col grow shrink h-auto w-full">
       <article className="flex grow shrink min-h-screen w-full justify-center items-center relative overflow-hidden">
-        <StickerHeroL className="absolute top-0 left-0 z-40 max-w-[50%]" />
-        <h2 className="flex flex-col font-monserrat relative z-50 font-black drop-shadow-2xl [&>span]:leading-[0.8]">
+        <StickerHeroL className="absolute top-0 left-0  max-w-[50%]" />
+        <h2 className="flex flex-col font-monserrat relative z-[2] font-black drop-shadow-2xl [&>span]:leading-[0.8]">
           <span className="text-[3.3rem] xsm:text-[5.3rem] sm:text-[6.25rem] md:text-[7.3rem] lg:text-[8.3rem] xl:text-[9.3rem] 2xl:text-[11.3rem] text-brand-purple">
             DISCORD
           </span>
@@ -25,7 +25,7 @@ export default function Hero() {
             2023
           </span>
         </h2>
-        <StickerHeroR className="absolute bottom-0 right-0 z-40 max-w-[50%]" />
+        <StickerHeroR className="absolute bottom-0 right-0  max-w-[50%]" />
       </article>
       <div className="flex gap-3 justify-center items-center mt-20 mb-10 flex-col lg:flex-row">
         <Button
