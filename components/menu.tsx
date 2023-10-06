@@ -29,6 +29,9 @@ function Menu({ options }: MenuProps) {
         setIsMenuOpen(true)
       }
     }
+
+    checkIsMobile()
+
     /* check if have window has being resize event */
 
     window.addEventListener('resize', checkIsMobile)
@@ -36,7 +39,7 @@ function Menu({ options }: MenuProps) {
     return () => {
       window.removeEventListener('resize', checkIsMobile)
     }
-  }, [isMenuOpen])
+  }, [])
 
   const handleToogleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -45,7 +48,7 @@ function Menu({ options }: MenuProps) {
   return (
     <>
       <header
-        className={`h-screen w-full fixed lg:static z-20 space-y-8 lg:space-x-0  lg:h-fit flex-col lg:flex-row px-8 lg:flex justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light transition lg:transition-none duration-300 ease-in-out ${
+        className={`h-screen w-full fixed lg:static z-20  lg:h-fit flex-col lg:flex-row px-8 lg:flex justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light transition lg:transition-none duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -81,7 +84,8 @@ function Menu({ options }: MenuProps) {
         className="fixed bottom-5 right-5 right z-50 w-10 h-10 bg-brand-yellow rounded-full text-brand-dark lg:hidden"
         onClick={handleToogleMenu}
       >
-        {/* TODO:  Mobile button Remplazar la 'x' con un svg para el menu y uno para cerrar que dependan se si isMenuOpen  */}x
+        {/* TODO:  Mobile button Remplazar la 'x' con un svg para el menu y uno para cerrar que dependan se si isMenuOpen  */}
+        x
       </button>
     </>
   )
