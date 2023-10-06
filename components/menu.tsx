@@ -48,9 +48,9 @@ function Menu({ options }: MenuProps) {
   return (
     <>
       <header
-        className={`h-screen w-full fixed lg:static z-20  lg:h-fit flex-col lg:flex-row px-8 lg:flex justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light transition lg:transition-none duration-300 ease-in-out ${
+        className={`h-screen w-full fixed lg:static z-20  lg:h-fit flex-col lg:flex-row px-8 lg:flex justify-between border-b-2 border-brand-dark dark:border-brand-yellow bg-brand-purple dark:bg-brand-dark text-brand-light transition lg:translate-x-0 lg:transition-none duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        } `}
       >
         <Logo />
         <div className="flex flex-col lg:flex-row gap-8  lg:items-center">
