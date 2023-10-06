@@ -1,5 +1,3 @@
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
-import Menu from '@/components/menu'
 import Date from '@/components/views/date'
 import Hero from '@/components/views/hero'
 
