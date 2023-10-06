@@ -11,13 +11,16 @@ import { Contributor } from "../types/contribuitors.types";
 
 function Footer() {
     const [collaborators, setCollaborators] = useState<Contributor[]>([] as Contributor[]);
+    const [tooltip, setTooltip] = useState<{id:number | null}>({id: null});
 
     const fetchCollaborators = async (): Promise<void> => {
         const front = await fetch(process.env.NEXT_PUBLIC_GITHUB_URL_FRONT as string);
         const back = await fetch(process.env.NEXT_PUBLIC_GITHUB_URL_BACK as string);
         const data1 = await front.json();
         const data2 = await back.json();
-        setCollaborators([...data1, ...data2]);
+        
+        const uniqueData = [...data1, ...data2].filter((v, i, a) => a.findIndex(t => (t.id === v.id)) === i) as Contributor[];
+        setCollaborators(uniqueData);
     }
 
     useEffect(() => {
@@ -27,25 +30,35 @@ function Footer() {
     return (
         <footer className="relative w- h-auto">
             <div className="absolute inset-0 grid gird grid-rows-fr-auto [&>div]:px-6">
-                <div className="flex justify-around items-end h-full pb-16">
+                <div className="flex justify-around items-end h-full pb-[10%]">
                     <div className="relative">
                         <span className="leading-[0.85] text-[9.3rem] text-brand-yellow font-[900] font-monserrat">
                             Contri<br />
                             buido<br />
                             res
                         </span>
-                        <div className="absolute flex flex-row flex-wrap">
+                        <div className="absolute top-[70%] left-[51%] w-[248px] flex flex-row flex-wrap gap-3 justify-center items-center">
                             {collaborators.map((contributor: Contributor, index: number) => {
+                                const id = contributor.id;
                                 return (
-                                    <div key={`${contributor.id}-${index}`}>
-                                        <span>{contributor.login}</span>
-                                        <Image src={contributor.avatar_url}
-                                            alt={contributor.login}
-                                            width={72}
-                                            height={72}
-                                            className="rounded-full"
-                                        />
-                                    </div>
+                                    <Link href={contributor.html_url} key={`${contributor.id}-${index}`} target="black">
+                                        <button type="button" className="relative"
+                                            onMouseEnter={() => setTooltip({id: id})}
+                                            onMouseLeave={() => setTooltip({id: null})}
+                                        >
+                                            <span
+                                                className={`absolute bottom-[100%] left-[50%] transform translate-x-[-50%] ${tooltip.id === id? 'visible opacity-100': 'invisible opacity-0'} text-sm text-white rounded-md bg-black font-semibold px-2 py-1 transition-opacity z-10`}>
+                                                {contributor.login}
+                                            </span>
+                                            <Image src={contributor.avatar_url}
+                                                alt={contributor.login}
+                                                width={72}
+                                                height={72}
+                                                className="rounded-full"
+                                                priority
+                                            />
+                                        </button>
+                                    </Link>
                                 )
                             })}
                         </div>
@@ -63,7 +76,7 @@ function Footer() {
                             <DiscordIcon className="w-[28px]" />
                         </Link>
                     </div>
-                    <div className="flex flex-row gap-4 [&>a]:text-white hover:[&>a]:underline font-jet-brains">
+                    <div className="flex flex-row gap-4 [&>a]:text-white hover:[&>a]:underline [&>a]:font-jet-brains">
                         <Link href="#">
                             Contribuir
                         </Link>
@@ -81,7 +94,7 @@ function Footer() {
                         </span>
                         <button className="bg-[none] outline-none cursor-pointer">
                             <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.745117L16 14.7451H0L8 0.745117Z" fill="#F7F1F9" />
+                                <path fillRule="evenodd" clipRule="evenodd" d="M8 0.745117L16 14.7451H0L8 0.745117Z" fill="#F7F1F9" />
                             </svg>
                         </button>
                     </div>

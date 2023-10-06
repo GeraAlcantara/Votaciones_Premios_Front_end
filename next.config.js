@@ -4,7 +4,7 @@ const nextConfig = {
   experimental: {
     serverActions: true //para que funcionen los server action
   },
-/*   images: {
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,7 +13,7 @@ const nextConfig = {
         pathname: "/u/**"
       },
     ],
-  }, */
+  },
 }
 
 module.exports = nextConfig
