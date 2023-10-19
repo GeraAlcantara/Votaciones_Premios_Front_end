@@ -12,7 +12,7 @@ export function About() {
   return (
     <>
       <div className="grid h-screen place-content-center bg-black">
-        <div className="p-10 relative">
+        <div className="p-10 relative mb-28">
           <Mas className="text-brand-yellow absolute top-[-3rem] left-[-2.5rem]" />
           <h2 className="flex flex-col font-monserrat relative z-50 font-black drop-shadow-2xl [&>span]:leading-[0.76]">
             <span className="font-monserrat text-[120px] font-black uppercase text-zinc-100">
@@ -30,8 +30,8 @@ export function About() {
         </div>
         {/* cards */}
         <div className="grid grid-cols-3 grid-rows-2 gap-6 w-[1222px] pt-10 pb-10 text-brand-dark font-monserrat ">
-          {/* carta una */}
-          <div className="text-center row-span-2 col-span-1 bg-brand-yellow rounded-xl px-5 py-10">
+          {/* cards left */}
+          <div className="px-14 text-center row-span-2 col-span-1 bg-brand-yellow rounded-xl py-10">
             <div className="relative w-[198px] h-[256px] mx-auto">
               <Star className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2" />
               <Copa className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2" />
@@ -48,8 +48,8 @@ export function About() {
               Por favor, ten en cuenta que los premios son digitales y carecen de valor menetario
             </p>
           </div>
-          {/* carta dos */}
-          <div className="px-14 col-span-2 bg-brand-purple rounded-xl py-10 space-y-8">
+          {/* cards right one */}
+          <div className="col-span-2 bg-brand-purple rounded-xl px-14 py-10 space-y-8">
             <div className="flex justify-between">
               <h3 className="flex flex-col text-6xl font-black gap-1">
                 <span className="text-brand-orange">GANA</span>
@@ -64,8 +64,8 @@ export function About() {
               emocionamos por estas "recompensas"! 😂🦄💨
             </p>
           </div>
-          {/* carta tres */}
-          <div className="col-span-2 bg-brand-yellow rounded-xl px-5 py-10 space-y-8">
+          {/* carta right two */}
+          <div className="col-span-2 bg-brand-yellow rounded-xl px-14 py-10 space-y-8">
             <div className="flex justify-between">
               <h5 className="font-monserrat text-brand-purple text-6xl font-black">CUIDADO</h5>
               <Surprised />
