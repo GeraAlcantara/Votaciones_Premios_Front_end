@@ -1,78 +1,81 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import Image from 'next/image'
 
-import MasAmarillo from '@/components/icons/mas-amarillo.svg'
-import MasNaranja from '@/components/icons/mas-naranja.svg'
-import And from '@/components/icons/and.svg'
-import Copa from '@/components/icons/copa.svg'
-import Star from '@/components/icons/star.svg'
-import Surprised from '@/components/icons/surprised.svg'
+import Mas from '@/components/icons/mas'
+import And from '@/components/icons/and'
+import Copa from '@/components/icons/copa'
+import Star from '@/components/icons/star'
+
+import Surprised from './icons/surprised'
 
 export function About() {
   return (
     <>
       <div className="grid h-screen place-content-center bg-black">
-        <Image alt="MasAmarillo" className="-ml-20" src={MasAmarillo} />
-        <div className="p-10">
-          <div className="font-['Montserrat'] text-[111.42px] font-black uppercase leading-[101.28px] text-zinc-100">
-            Pre Registrate
-          </div>
-          <div className="font-['Montserrat'] text-[99.11px] font-black uppercase leading-[90.09px] text-lime-400">
-            COMO CANDIDAT
-          </div>
-          <div className="grid justify-end -mt-28">
-            <Image alt="and" src={And} />
-          </div>
-          <div className="font-['Montserrat'] text-[172.96px] font-black uppercase leading-[158.95px] text-indigo-600">
-            participa
-          </div>
-          <div className="grid justify-items-end -mr-20">
-            <Image alt="MasNaranja" src={MasNaranja} />
-          </div>
-          <div className="grid grid-cols-3 grid-rows-2 gap-6 w-[1222px] h-[558px] pt-10 pb-10">
-            <div className="row-span-2 col-span-1 bg-brand-yellow rounded-xl">
-              <div className="relative w-[198px] h-[256px] mx-auto text-brand-dark">
-                <Image
-                  alt="star"
-                  className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
-                  src={Star}
-                />
-                <Image
-                  alt="copa"
-                  className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
-                  src={Copa}
-                />
-              </div>
-              <h5>PREMIOS</h5>
-              <h5 className="text-brand-purple">INCREIBLES</h5>
-              <h5>CHAFA</h5>
-              <p>La participación en los premios es bajo tu propia responsabilidad</p>
-              <p>
-                Por favor, ten en cuenta que los premios son digitales y carecen de valor menetario
-              </p>
+        <div className="p-10 relative">
+          <Mas className="text-brand-yellow absolute top-[-3rem] left-[-2.5rem]" />
+          <h2 className="flex flex-col font-monserrat relative z-50 font-black drop-shadow-2xl [&>span]:leading-[0.76]">
+            <span className="font-monserrat text-[120px] font-black uppercase text-zinc-100">
+              Pre Registrate
+            </span>
+            <span className=" relative font-monserrat text-[110px] font-black uppercase text-lime-400">
+              COMO CANDIDAT
+              <And className="absolute right-[-2%] top-[-4%]" />
+            </span>
+            <span className="font-monserrat text-[185px] font-black uppercase text-indigo-600">
+              participa
+            </span>
+          </h2>
+          <Mas className="text-brand-orange absolute bottom-[-10%] right-[1%]" />
+        </div>
+        {/* cards */}
+        <div className="grid grid-cols-3 grid-rows-2 gap-6 w-[1222px] pt-10 pb-10 text-brand-dark font-monserrat ">
+          {/* carta una */}
+          <div className="text-center row-span-2 col-span-1 bg-brand-yellow rounded-xl px-5 py-10">
+            <div className="relative w-[198px] h-[256px] mx-auto">
+              <Star className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2" />
+              <Copa className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2" />
             </div>
-            <div className="col-span-2 bg-brand-purple rounded-xl">
-              <h5>GANA</h5>
-              <h5>STICKERS</h5>
-              <Image alt={'carita'} src={Surprised} />
-              <p>
-                ¡Los premios son tan chafas que al ganar te dan stickers digitales que puedes
-                conseguir más fácil que encontrar un unicornio en tu jardín! ¡Literalmente los
-                sacamos de Figma Community, donde son más gratis que el aire que respiramos! ¡Y
-                pensar que nos emocionamos por estas "recompensas"! 😂🦄💨
-              </p>
+            <h3 className="flex flex-col relative z-50 font-black drop-shadow-2xl [&>span]:leading-[0.85]">
+              <span className="text-4xl ">PREMIOS</span>
+              <span className="text-brand-purple text-xl">INCREIBLEMENTE</span>
+              <span className="text-5xl">CHAFA</span>
+            </h3>
+            <p className="text-xl py-5 font-medium">
+              La participación en los premios es bajo tu propia responsabilidad
+            </p>
+            <p className="font-medium">
+              Por favor, ten en cuenta que los premios son digitales y carecen de valor menetario
+            </p>
+          </div>
+          {/* carta dos */}
+          <div className="px-14 col-span-2 bg-brand-purple rounded-xl py-10 space-y-8">
+            <div className="flex justify-between">
+              <h3 className="flex flex-col text-6xl font-black gap-1">
+                <span className="text-brand-orange">GANA</span>
+                <span className="text-brand-yellow">STICKERS</span>
+              </h3>
+              <Surprised />
             </div>
-            <div className="col-span-2 bg-brand-yellow rounded-xl">
-              <h5>cuidado</h5>
-              <Image alt={'carita'} src={Surprised} />
-              <p>
-                ¡Los premios son tan chafas que al ganar te dan stickers digitales que puedes
-                conseguir más fácil que encontrar un unicornio en tu jardín! ¡Literalmente los
-                sacamos de Figma Community, donde son más gratis que el aire que respiramos! ¡Y
-                pensar que nos emocionamos por estas "recompensas"! 😂🦄💨
-              </p>
+            <p className="text-white font-medium">
+              ¡Los premios son tan chafas que al ganar te dan stickers digitales que puedes
+              conseguir más fácil que encontrar un unicornio en tu jardín! ¡Literalmente los sacamos
+              de Figma Community, donde son más gratis que el aire que respiramos! ¡Y pensar que nos
+              emocionamos por estas "recompensas"! 😂🦄💨
+            </p>
+          </div>
+          {/* carta tres */}
+          <div className="col-span-2 bg-brand-yellow rounded-xl px-5 py-10 space-y-8">
+            <div className="flex justify-between">
+              <h5 className="font-monserrat text-brand-purple text-6xl font-black">CUIDADO</h5>
+              <Surprised />
             </div>
+            <p className="font-medium">
+              ¡Los premios son tan chafas que al ganar te dan stickers digitales que puedes
+              conseguir más fácil que encontrar un unicornio en tu jardín! ¡Literalmente los sacamos
+              de Figma Community, donde son más gratis que el aire que respiramos! ¡Y pensar que nos
+              emocionamos por estas "recompensas"! 😂🦄💨
+            </p>
           </div>
         </div>
       </div>
