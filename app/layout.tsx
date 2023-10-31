@@ -5,6 +5,9 @@ import type { MenuOptions } from '@/types/menu.type'
 import { Montserrat, JetBrains_Mono } from 'next/font/google'
 
 import { ThemeProvider } from '@/lib/theme-provider'
+
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+import { About } from '@/components/About'
 import Menu from '@/components/menu'
 import Footer from '@/components/footer'
 
@@ -41,8 +44,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider enableSystem attribute="class" defaultTheme="system">
           <Menu options={routes} />
 
-          <div>{children}</div>
+          <main>{children}</main>
+          <About />
+
           <Footer />
+
         </ThemeProvider>
       </body>
     </html>
